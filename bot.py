@@ -100,9 +100,9 @@ def main():
     app.add_handler(MessageHandler(filters.TEXT & filters.Regex("^⬅️ Main Menu$"), go_back_to_main))
     app.add_handler(MessageHandler(filters.TEXT & filters.Regex("^⬅️ Back to Years$"), go_back_to_years))
     app.add_handler(MessageHandler(filters.TEXT & filters.Regex(r"^\d{4}$"), show_files))
-    app.add_handler(MessageHandler(filters.TEXT, send_file))  # fallback for filename match
+    app.add_handler(MessageHandler(filters.TEXT, send_file))
 
-    print("Bot running...")
+    print("Bot running ...")
     app.run_polling()
 
 if __name__ == '__main__':
