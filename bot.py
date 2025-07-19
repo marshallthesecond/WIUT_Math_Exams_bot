@@ -6,7 +6,7 @@ from telegram.ext import (
 import os
 
 EXAMS_PATH = 'exams'
-TOKEN = os.getenv["BOT_TOKEN"]
+TOKEN = os.getenv("BOT_TOKEN")
 
 # Main menu keyboard
 main_menu_keyboard = ReplyKeyboardMarkup(
