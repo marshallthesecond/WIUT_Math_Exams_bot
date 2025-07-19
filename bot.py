@@ -99,7 +99,7 @@ def main():
     app.add_handler(MessageHandler(filters.TEXT & filters.Regex("^📘 WIUT Math Entrance Exam Samples$"), show_years))
     app.add_handler(MessageHandler(filters.TEXT & filters.Regex("^⬅️ Main Menu$"), go_back_to_main))
     app.add_handler(MessageHandler(filters.TEXT & filters.Regex("^⬅️ Back to Years$"), go_back_to_years))
-    app.add_handler(MessageHandler(filters.TEXT & filters.Regex("r^\d{4}$"), show_files))
+    app.add_handler(MessageHandler(filters.TEXT & filters.Regex(r"^\d{4}$"), show_files))
     app.add_handler(MessageHandler(filters.TEXT, send_file))  # fallback for filename match
 
     print("Bot running...")
