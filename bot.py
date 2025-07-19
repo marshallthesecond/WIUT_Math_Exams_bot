@@ -6,7 +6,6 @@ from telegram.ext import (
 import os
 
 EXAMS_PATH = 'exams'
-TOKEN = os.getenv("BOT_TOKEN")
 
 # Main menu keyboard
 main_menu_keyboard = ReplyKeyboardMarkup(
@@ -92,7 +91,8 @@ async def go_back_to_years(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # Main
 def main():
-    TOKEN = "BOT_TOKEN"
+    TOKEN = os.getenv("BOT_TOKEN")
+
     app = ApplicationBuilder().token(TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
