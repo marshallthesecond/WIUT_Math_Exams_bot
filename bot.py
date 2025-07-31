@@ -7,6 +7,9 @@ import os
 
 EXAMS_PATH = 'exams'
 
+# TOKEN = os.environ["BOT_TOKEN"]
+
+
 # Main menu keyboard
 main_menu_keyboard = ReplyKeyboardMarkup(
     keyboard=[[KeyboardButton("📘 WIUT Math Entrance Exam Samples")]],
@@ -91,7 +94,10 @@ async def go_back_to_years(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # Main
 def main():
-    TOKEN = os.getenv("BOT_TOKEN")
+
+    TOKEN = "7593299514:AAHI7pvkI5qkKa2OomypHgv9Fbrge7tEnZA"
+
+#    TOKEN = os.getenv("BOT_TOKEN")
 
     app = ApplicationBuilder().token(TOKEN).build()
 
